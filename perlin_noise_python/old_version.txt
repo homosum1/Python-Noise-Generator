@@ -1,0 +1,116 @@
+
+"""
+def perlin_print_1D(octaves, generated):
+    horizontal_points = 440
+    vertical_points = 630
+
+    image = Image.new('RGB', (vertical_points, horizontal_points), (80,80,80))
+    pixel_array = image.load()    
+    
+    NormalNoiseSeed = [0] * vertical_points
+    PerlinNoiseSeed = [0] * vertical_points
+
+    if not generated:
+        for i in range(0, vertical_points):
+            NormalNoiseSeed[i] = random.random()
+    
+    perlin_noise_1D(vertical_points, NormalNoiseSeed, octaves, 2, PerlinNoiseSeed)
+
+    for i in range(vertical_points):
+        y = math.floor(PerlinNoiseSeed[i] * horizontal_points*3/4)
+ 
+        for j in range(0, y):
+            #print(str(i) + " " + str(j))
+            pixel_array[i,  (horizontal_points-1) - j] = (35, 159, 217)
+
+    image.save("map.png")
+
+
+
+def perlin_noise_1D(nCount, fSeed, nOctaves, fBias, fOutput):
+    for x in range(nCount):
+        fNoise = 0.0
+        fScaleAcc = 0.0
+        fScale = 1.0
+
+        for o in range(nOctaves):
+			
+            nPitch = int(math.floor( nCount/pow(2, o) ))
+            nSample1 = int(math.floor(x / nPitch)) * nPitch 
+            nSample2 = (nSample1 + nPitch) % nCount
+
+            fBlend = float(x - nSample1) / float(nPitch)
+            fSample = float(1.0 - fBlend) * fSeed[nSample1] + fBlend * fSeed[nSample2]
+            #print("fBlend : " + str(fBlend) + " x : " + str(x) + " nSample1 : " + str(nSample1) + " nPitch : " + str(nPitch))
+            fScaleAcc += fScale;
+            fNoise += fSample * fScale
+            fScale = fScale / fBias
+
+        fOutput[x] = fNoise / fScaleAcc
+"""      
+
+def perlin_print(my_window):
+    horizontal_points = 440
+    vertical_points = 630
+
+    image = Image.new('RGB', (vertical_points, horizontal_points), (80,80,80))
+    pixel_array = image.load()
+  
+    element_cnt = (horizontal_points * vertical_points)
+    NormalNoiseSeed = [0] * element_cnt
+    PerlinNoiseSeed = [0] * element_cnt
+
+    for i in range(0, element_cnt):
+        NormalNoiseSeed[i] = random.random()
+
+    perlin_noise(vertical_points, horizontal_points, NormalNoiseSeed, 2, 2, PerlinNoiseSeed)
+
+    
+    for x in range(0, vertical_points):
+        for y in range(0, horizontal_points):
+            n = int(PerlinNoiseSeed[y * vertical_points + x] * 16.0)
+
+            norm = np.linalg.norm((x - vertical_points/2 ,y - horizontal_points/2))
+            if norm < 120:
+                if n > 13:
+                    pixel_array[x, y] = (188, 188, 188)
+                    continue
+                if n > 9:
+                    pixel_array[x, y] = (102, 210, 75)
+                    continue
+                if n > 8:
+                    pixel_array[x,y] = (246, 255, 104) 
+                    continue
+                else:
+                    pixel_array[x,y] = (35, 159, 217)
+
+    image.save("map.png")
+    
+def perlin_noise(Width, Height, fSeed, nOctaves, fBias, fOutput):
+    for x in range(Width):
+        for y in range(Height):
+            fNoise = 0.0
+            fScaleAcc = 0.0
+            fScale = 1.0
+
+            for o in range(nOctaves):
+    
+                nPitch = int(Width/pow(2, o));
+                nSampleX1 = math.floor( (x / nPitch) * nPitch )
+                nSampleY1 = math.floor( (y / nPitch) * nPitch )
+					
+                nSampleX2 = math.floor( (nSampleX1 + nPitch) % Width )					
+                nSampleY2 = math.floor( (nSampleY1 + nPitch) % Width )
+                
+                fBlendX = (x - nSampleX1) / nPitch
+                fBlendY = (y - nSampleY1) / nPitch
+                
+                if(nSampleY2 * Width + nSampleX1 < len(fSeed)):
+                    fSampleT = (1.0 - fBlendX) * fSeed[nSampleY1 * Width + nSampleX1] + fBlendX * fSeed[nSampleY1 * Width + nSampleX2]
+                    fSampleB = (1.0 - fBlendX) * fSeed[nSampleY2 * Width + nSampleX1] + fBlendX * fSeed[nSampleY2 * Width + nSampleX2]
+
+                    fScaleAcc += fScale
+                    fNoise += (fBlendY * (fSampleB - fSampleT) + fSampleT) * fScale
+                    fScale = fScale / fBias
+	    
+                    fOutput[y * Width + x] = fNoise / fScaleAcc
