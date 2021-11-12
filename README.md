@@ -28,6 +28,8 @@ Po wprowadzeniu nowych parametrów, wystarczy nacisnąć przycisk submit, który
 
 <b>Sposób reprezentacji wyników</b>
 
+Wynik działania algorytmu przedstawiany jest w postaci wykresu, reprezentowanego w programie przez plik map.png, który nadpisywany jest w trakcie pracy algorytmu.
+
 Algorytm szumu pozwala nam na zamianę zmiennych losowych w pozornie "naturalnie" wyglądające układy - jest to w implementacji Perlina tak zwany szum gradientowy.
 W jaki sposób obserwujemy wyniki? Jak widać po uruchomieniu programu widzimy wykres o stałej wartości y. Dzieje się tak dlatego, że początkowo ilość oktaw ustawiona jest na 1. Zatem interpolacja liniowa w naszym algorytmie odbywa się względem tylko jednego punktu, co w rezultacie daje nam całkowicie wypłaszczony wykres. Zmiana liczby oktaw na wyższą spowoduje, że wykres zacznie przypominać "naturalnie wyglądające pasmo górskie", co jest skutkiem wykonywania coraz większej ilości przybliżeń między punktami i wyliczanie na ich podstawie, nowych punktów o zbliżonej wartości.
 
