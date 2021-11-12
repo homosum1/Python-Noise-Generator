@@ -25,8 +25,9 @@ Po wprowadzeniu nowych parametrów, wystarczy nacisnąć przycisk submit, który
 *utworzenie nowego zestawu zmiennych losowych spowoduje reprezentację wyniku dla wcześniej określonych parametrów co widać na stanie licznika parametru
 
 <b>Sposób reprezentacji wyników</b>
+
 Algorytm szumu pozwala nam na zamianę zmiennych losowych w pozornie "naturalnie" wyglądające układy - jest to w implementacji Perlina tak zwany szum gradientowy.
-W jaki sposób obserwujemy wyniki? Jak widać po uruchomieniu programu widzimy wykres o stałej wartości y. Dzieje się tak dlatego, że początkowo ilość oktaw ustawiona jest na 1. Zatem interpolacja liniowa w naszym algorytmie odbywa się względem tylko jednego punktu, co w rezultacie daje nam całkowicie wypłaszczony wykres. Zmiana liczby oktaw na wyższą spowoduje, że wykres zacznie przypominać "naturalnie wyglądające" pasmo górskie, co jest skutkiem wykonywania coraz większej ilości przybliżeń między punktami i wyliczanie na ich podstawie, nowych punktów o zbliżonej wartości.
+W jaki sposób obserwujemy wyniki? Jak widać po uruchomieniu programu widzimy wykres o stałej wartości y. Dzieje się tak dlatego, że początkowo ilość oktaw ustawiona jest na 1. Zatem interpolacja liniowa w naszym algorytmie odbywa się względem tylko jednego punktu, co w rezultacie daje nam całkowicie wypłaszczony wykres. Zmiana liczby oktaw na wyższą spowoduje, że wykres zacznie przypominać "naturalnie wyglądające pasmo górskie", co jest skutkiem wykonywania coraz większej ilości przybliżeń między punktami i wyliczanie na ich podstawie, nowych punktów o zbliżonej wartości.
 
 Zmiana parametru bias na skrajnie mały skutkować będzie natomiast powrotem wyglądu wykresu do tego jaki otrzymalibyśmy podczas reprezentacji zmiennych wygenerowanych losowo, dzieje się tak dlatego, że zmienna ta stanowi mianownik w ilorazie na podstawie którego wyznaczana jest skala z każdym kolejnym wyznaczeniem oktawy. Mechanizm działania dobrze ilustrują poniższe grafiki.
 
