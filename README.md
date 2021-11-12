@@ -33,3 +33,4 @@ W jaki sposób obserwujemy wyniki? Jak widać po uruchomieniu programu widzimy w
 
 Zmiana parametru bias na skrajnie mały skutkować będzie natomiast powrotem wyglądu wykresu do tego jaki otrzymalibyśmy podczas reprezentacji zmiennych wygenerowanych losowo, dzieje się tak dlatego, że zmienna ta stanowi mianownik w ilorazie na podstawie którego wyznaczana jest skala z każdym kolejnym wyznaczeniem oktawy. Mechanizm działania dobrze ilustrują poniższe grafiki.
 
+<img width="350" alt="input view" src="https://raw.githubusercontent.com/homosum1/Python-Noise-Generator/main/screenshots/low_bias_2.png">     <img width="350" alt="input view" src="https://raw.githubusercontent.com/homosum1/Python-Noise-Generator/main/screenshots/low_bias_1.png"> 
