@@ -24,6 +24,8 @@ Po wprowadzeniu nowych parametrów, wystarczy nacisnąć przycisk submit, który
 
 *utworzenie nowego zestawu zmiennych losowych spowoduje reprezentację wyniku dla wcześniej określonych parametrów co widać na stanie licznika parametru
 
+<img width="350" alt="input view" src="https://raw.githubusercontent.com/homosum1/Python-Noise-Generator/main/screenshots/inputting_variables.png">      <img width="350" alt="input view" src="https://raw.githubusercontent.com/homosum1/Python-Noise-Generator/main/screenshots/noise_example.png">
+
 <b>Sposób reprezentacji wyników</b>
 
 Algorytm szumu pozwala nam na zamianę zmiennych losowych w pozornie "naturalnie" wyglądające układy - jest to w implementacji Perlina tak zwany szum gradientowy.
