@@ -1,5 +1,5 @@
 # Python-Noise-Generator
-Repozytorium zawiera implementację algorytmu szumu, zbliżoną działaniem do szumu Perlinowskiego. Graficzna reprezentacja projektu zostałą zrealizowana przy wykorzystaniu biblioteki pygame.
+Repozytorium zawiera implementację algorytmu szumu, zbliżoną działaniem do szumu Perlinowskiego. Graficzna reprezentacja projektu zostałą zrealizowana przy wykorzystaniu biblioteki Pygame.
 
 
 ## Opis funkcji programu oraz kompilacja
