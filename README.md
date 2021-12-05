@@ -4,7 +4,7 @@ Repozytorium zawiera implementację algorytmu szumu, zbliżoną działaniem do s
 
 ## Opis funkcji programu oraz kompilacja
 
-<b>Elementy składowe </b>
+<b>Elementy składowe: </b>
 
 Program składa się z trzech plików *.py (perlin_render, noise, button) oraz jednej mapy w postaci pliku "map.png", przy czym każdy z nich spełnia odpowiednią funkcjonalność:
 
@@ -15,7 +15,7 @@ Program składa się z trzech plików *.py (perlin_render, noise, button) oraz j
 - <b>noise.py</b>
   plik zawierający główną klasę programu, odpowiedzialną za obsługę algorytmu szumu oraz jego odpowiednie prezentowanie użytkownikowi
   
- <b>Kompilacja</b>
+ <b>Kompilacja:</b>
  
  Program został napisany w Pythonie 3
  
