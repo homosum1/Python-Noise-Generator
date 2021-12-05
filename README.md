@@ -35,7 +35,7 @@ Do naszej dyspozycji otrzymujemy trzy funkcjonalne przyciski (submit, create ora
 
 Po wprowadzeniu nowych parametrów, wystarczy nacisnąć przycisk submit, który wygeneruje dla nas szum o zadanych wcześniej parametrach. Przycisk <b>create</b> natomiast odpowiada za wygenerowanie nowego "seeda" czyli zestawu zmiennych losowych z przedziału (0,1) na podstawie których tworzona jest sekwencja wynikowa algorytmu.
 
-*utworzenie nowego zestawu zmiennych losowych spowoduje reprezentację wyniku dla wcześniej określonych parametrów co widać na stanie licznika parametru
+*utworzenie nowego zestawu zmiennych losowych spowoduje reprezentację wyniku dla wcześniej określonych parametrów co widać na stanie licznika parametru.
 
 <img width="350" alt="input view" src="https://raw.githubusercontent.com/homosum1/Python-Noise-Generator/main/screenshots/inputting_variables.png">      <img width="350" alt="input view" src="https://raw.githubusercontent.com/homosum1/Python-Noise-Generator/main/screenshots/noise_example.png">
 
