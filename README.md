@@ -24,13 +24,14 @@ Program składa się z trzech plików *.py (perlin_render, noise, button) oraz j
  - biblioteki PIL (wykorzystywanej do edycji pliku *.png)
  - biblioteki numpy
  
+ Plikiem głównym ("main") programu jest plik "perlin_rder.py".
   
 ## Dokładniejszy opis działania kluczowych fragmentów programu
 
-<b>poruszanie się po menu</b>
+<b>Poruszanie się po menu</b>
 
-Po uruchomieniu programu ukażę się nam jego menu wraz z głównym ekranem wyświetlającym wyniki (interpretacja wyników omówiona jest w następnym podpunkcie)
-Do naszej dyspozycji otrzymujemy trzy funkcjonalne przyciski (submit, create oraz exit), przy czym działanie przycisku exit jest dość wymowne. Na lewo od przycisku znajdują się dwa input-boxy (ocvates i bias). Liczby koło napisów opisują aktualny zadany stan parametrów. W celu zmienienia parametrów należy kliknąć myszą w pole i wprowadzić odpowiedni parametr. Program zabezpieczony jest przed wprowadzaniem niepoprawnych danych (przyjmowane są wyłącznie cyfry oraz kropki oznaczające rozdzielenie części zmienno od stałoprzecinkowej liczby). Zmienna <b>octaves</b> powinna być liczbą naturalną z przedziału około 1-10, natomiast liczba <b>Bias</b> może być liczbą całkowitą, preferowany przedział 10^(-3) - 10. 
+Po uruchomieniu programu pojawi się nam jego menu wraz z głównym ekranem wyświetlającym wyniki (interpretacja wyników omówiona jest w następnym podpunkcie).
+Do naszej dyspozycji otrzymujemy trzy funkcjonalne przyciski (submit, create oraz exit), przy czym działanie przycisku exit jest dość wymowne. Na lewo od przycisku znajdują się dwa input-boxy (ocvates oraz bias). Liczby koło napisów opisują aktualny zadany stan parametrów. W celu zmienienia parametrów należy kliknąć myszą w pole i wprowadzić odpowiedni parametr. Program zabezpieczony jest przed wprowadzaniem niepoprawnych danych (przyjmowane są wyłącznie cyfry oraz kropki oznaczające rozdzielenie części zmienno od stałoprzecinkowej liczby). Zmienna <b>octaves</b> powinna być liczbą naturalną z przedziału około 1-10, natomiast liczba <b>Bias</b> może być liczbą całkowitą, preferowany przedział 10^(-3) - 10. 
 
 Po wprowadzeniu nowych parametrów, wystarczy nacisnąć przycisk submit, który wygeneruje dla nas szum o zadanych wcześniej parametrach. Przycisk <b>create</b> natomiast odpowiada za wygenerowanie nowego "seeda" czyli zestawu zmiennych losowych z przedziału (0,1) na podstawie których tworzona jest sekwencja wynikowa algorytmu.
 
